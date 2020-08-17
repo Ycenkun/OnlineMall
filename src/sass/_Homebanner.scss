@@ -1,0 +1,42 @@
+@charset "utf-8"; //设置字符编码
+#banner{
+    width: 100%;
+    .ban-img{
+        position: relative;
+        width: 100%;
+    }
+    img{
+        width: 100%;
+    }
+    .ban-img-box{
+        
+        position: absolute;
+        left: 310px;
+        top: 36px;
+        
+        .show-img{
+            width: 913px;
+            height: 319px;
+            border: 10px solid white;
+            box-shadow: 0px 5px 5px #c7c7c7;
+            // width: 920px;
+            // height: 327px;
+            display: flex;
+            overflow: hidden;
+        }
+    }
+}
+#img-wpkqj{
+    width: 1170px;
+    height: 120px;
+    margin: 0 auto;
+}
+#img-ad{
+    width: 1200px;
+    height: 250px;
+    margin: 0 auto;
+    img{
+        margin-right: 10px;
+    }
+}
+

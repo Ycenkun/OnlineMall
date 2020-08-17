@@ -1,0 +1,327 @@
+@charset "utf-8"; //设置字符编码
+// %center{
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+    
+// }
+#header {
+    width: 100%;
+    height: 187px;
+    background: #f5f5f5;
+    .header-wrap {
+        width: $wrapwidth;
+        margin: 0 auto;
+        display: flex;
+        .left {
+            width: 86px;
+            height: 28px;
+            line-height: 28px;
+            // border: 1px solid;
+            padding: 0 23px 0 15px;
+            .choosecity {
+                display: flex;
+                &:hover .citybox{
+                    display: block;
+                }
+            }
+            .city {
+                width: 46px;
+                font-size: 12px;
+                position: relative;
+                
+            }
+            .citybox{
+                position: absolute;
+                left: 0;
+                top: 30px;
+                width: 500px;
+                height: 200px;
+                background-color: rgb(229, 227, 230);
+                display: none;
+                z-index: 10;
+            }
+            .chooseaddres{
+                display: flex;
+                justify-content: center;
+                padding: 10px 5px;
+            }
+            .setsize{
+                width: 150px;
+                height: 150px;
+                border: 1px solid black;
+                margin: 5px;
+            }
+            // #province{
+                
+            // }
+
+            .image {
+                width: 8px;
+                height: 8px;
+                line-height: 20px; 
+            }
+        }
+
+        .right {
+            margin-left: 176px;
+            // line-height: 30px;
+            width: 800px;
+            height: 30px;
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            //公共样式
+            .pub{
+                cursor: pointer;
+            }
+            //请登录的样式
+            .load{
+                position: relative;
+                .loadbox{
+                    display: none;
+                    width: 260px;
+                    height: 160px;
+                    position: absolute;
+                    top: 21px;
+                    left: 0;
+                    border: 1px solid rgb(102, 102, 102);
+                    background-color: rgb(252, 249, 249);
+                    font-size: 20px;
+                    padding-top: 50px;
+                    z-index: 10;
+                        
+                    
+                }
+                &:hover .loadbox{
+                    display: block;
+                }
+                // &:hover{
+                //     background: rgb(252, 249, 249);
+
+                // }
+                // .helloload{
+                    
+                // }
+            }
+            //签到有礼
+            #sign-a{
+                display: flex;
+                color: black;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .imgjump{
+                padding: 0 4px 8px 0;
+            }
+            //更多
+            .more{
+                position: relative;
+                .morebox{
+                    width: 200px;
+                    height: 180px;
+                    background-color: rgb(252, 248, 248);
+                    position: absolute;
+                    right: 0;
+                    top: 21px;
+                    display: none;
+                    color: black;
+                    font-size: 20px;
+                    padding-top: 20px;
+                    border: 1px solid rgb(95, 95, 95);
+                    z-index: 10;
+
+                }
+                &:hover .morebox{
+                    display: block;
+                }
+            }
+        }
+    }
+    //头部logo区
+    .logo-wrap{
+        width: 1170px;
+        margin: 0 auto;
+        display: flex;
+        // overflow: hidden;
+        .fxg{
+            width: 400px;
+            height: 100px;
+            padding: 14px 0 0 5px;
+            // background:url(./img/a.png) no-repeat;
+        }
+        .search{
+            padding: 40px 0 0 50px;
+            p{
+                display: flex;
+                justify-content: center;
+                border: 2px solid $maincolor;
+                border-radius: 3px;
+                background: $maincolor;
+    
+            }
+            input{
+                width: 300px;
+                height: 30px;
+                border: none;
+                padding-left: 5px;
+    
+            }
+            .btn{
+                width: 60px;
+                height: 32px;
+                // background: $maincolor;
+                background: url("../img/btn.png") no-repeat;
+                background-position: center;
+                background-size: 60px 37px;
+            }
+        }
+        //购物袋
+        .bags{
+            margin: 40px 0 0 15px;
+            width: 120px;
+            height: 32px;
+            background: #f6f7f9;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            border:1px solid rgb(153, 153, 151);
+            border-radius: 3px;
+            .bag-icon{
+                width: 20px;
+                height: 32px;
+                // color: black;
+                background:url(../img/sprite.png) ;
+                background-position: -49px -90px;
+            }
+            .showbagnum{
+                width: 19px;
+                height: 20px;
+                background: $maincolor;
+                border-radius: 9px;
+                color: white;
+                line-height: 20px;
+                padding-left: 8px;
+                cursor: pointer;
+            }
+        }
+    }
+
+
+
+    //导航栏   始终固定在顶部
+    #nav{
+        // overflow: hidden;
+        // position: sticky;
+        // top: 0px;
+        width: 1170px;
+        margin: 0 auto;
+        font-size: 18px;
+        padding: 0 20px;
+        .nav-wrap{
+            @extend %center;
+            // background: rgb(184, 181, 181);
+            li{
+                cursor: pointer;
+            }
+
+            li:nth-child(1){
+                position: relative;
+                height: 43px;
+                @extend %center;
+                justify-content: center;
+                width: 156px;
+                background: $maincolor;
+                font-size: 18px;
+                font-family: tahoma;
+                padding: 0 10px;
+                color: white;
+                display: flex;
+                .imgbox{
+                    width: 30px;
+                    height: 30px;
+                    background-image: url(../img/sprite.png);
+                    background-position: 49px -117px;
+
+                }
+                &:hover .hidebox{
+                    display: block;
+                }
+            }
+            .hidebox{
+                width: 141px;
+                // height: 200px;
+                background: $maincolor;
+                position: absolute;
+                left: 0;
+                top: 38px;
+                display: none;
+                padding: 15px 0 10px 35px;
+                z-index: 10;
+                // @extend %center;
+            }
+            dd{
+                font-size: 14px;
+                margin-top: 35px;
+            }
+
+            li:nth-child(2){
+                font-weight: bolder;
+                color: $maincolor;
+            }
+            li:nth-child(4){
+                font-weight: bolder;
+                color: black;
+                @extend %center
+            }
+            .hot{
+                width: 20px;
+                height: 30px;
+                background: url(../img/hot.gif) no-repeat;
+                margin-right: 5px;
+            }
+
+            li:nth-child(13){
+                @extend %center;
+                position: relative;
+                .botarr{
+                    width: 20px;
+                    height: 20px;
+                    background: url(../img/sprite.png) no-repeat;
+                    background-position: -9px -199px;
+                }
+                &:hover .li13hidebox{
+                    display: block;
+                    background: rgb(252, 249, 249);
+                }
+                // &:hover{
+                //     display: block;
+                //     background: rgb(240, 238, 238);
+                // }
+            }
+            .li13hidebox{
+                position: absolute;
+                right: -20px;
+                top: 20px;
+                width: 100px;
+                z-index: 10;
+                display: none;
+            }
+            .li13hideboxdd{
+                // background: $maincolor;
+                padding: 0 15px 20px 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                color: rgb(8, 8, 8);
+                font-size: 16px;
+                // border: 1px solid rgb(212, 212, 212);
+                // border-radius: 5px;
+                // border-top: none;
+            }
+
+        }
+    }
+    
+}

@@ -1,0 +1,202 @@
+@charset "utf-8"; //设置字符编码
+//必看专区
+// #img-bikan{
+//     padding-top: 30px;
+//     width: 1200px;
+//     height: 120px;
+//     margin: 0 auto;
+// }
+
+// #img-box{
+//     // margin: 0 auto;
+//     .img-box-wrap{
+//         margin: 0 auto;
+//         width: 1170px;
+//         height: 342px;
+//         padding-bottom: 30px;
+//         display: flex;
+//         justify-content: space-between;
+//     }
+//     #partA{
+//         width: 560px;
+//         height: 342px;
+//         border: 1px solid rgb(102, 102, 102);
+
+//     }
+//     #partB{
+//         width: 580px;
+//         height: 342px;
+//         border: 1px solid rgb(102, 102, 102);
+
+//     }
+// }
+
+
+
+//今日必抢
+#bq-wrap{
+    width: 100%;
+    background: $maincolor;
+    margin-top: 60px;
+    padding-top: 20px;
+}
+#biqiang{
+    width: $wrapwidth;
+    height: 125px;
+    margin: 0 auto;
+    position: relative;
+    .bq-line-left{
+        width: 200px;
+        border-bottom: 1px solid #ffdfef;
+        position: absolute;
+        top: 65px;
+        left: 220px;
+    }
+    .bq-line-right{
+        width: 200px;
+        border-bottom: 1px solid#ffdfef;
+        position: absolute;
+        top: 65px;
+        left: 570px;
+    }
+    .bq-letter{
+        width: 150px;
+        height: 40px;
+        background: #ffdfef;
+        color: $maincolor;
+        position: absolute;
+        top: 45px;
+        left: 420px;
+        @extend %center;
+        justify-content: center;
+        font-size: 24px;
+
+    }
+}
+
+//必抢数据渲染部分
+#bq-data{
+    width: 100%;
+    background: $maincolor;
+    margin-top: 30px;
+    // padding-left: 50px;
+}
+.bq-data-wrap{
+    width: 1180px;
+    padding: 0 20px;
+    margin: 0 auto;
+    padding-left: 100px;
+
+    // @extend %center;
+    display: flex;
+    flex-wrap: wrap;  //必须在父元素中使用
+    
+    .data-column{
+        width: 230px;
+        height: 380px;
+        background: white;
+        margin: 10px;
+        flex-shrink: 0; //让图片不压缩
+        // flex-wrap: nowrap;
+        padding: 15px 15px 25px 15px;
+        border: 1px solid $maincolor;
+        border-radius: 10px;
+    }
+    .data-img{
+            width: 230px;
+            height: 230px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+    }
+    .data-introduce{
+        margin-top: 15px;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-shrink: 0;
+        height: 18px;
+        line-height: 18px;
+        .brand{
+            white-space: nowrap;
+            color: #585c64;
+            font-family: tahoma;
+            font-size: 14px;
+            // overflow: hidden;
+            // text-overflow: ellipsis;
+        }
+        .detail{
+            color: #585c64;
+            font-size: 14px;
+            font-family: tahoma;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    .data-title{
+        margin-top: 7px;
+        color: #4a4a4a;
+        font-size: 18px;
+        font-weight: bolder;
+    }
+    .data-tips{
+        margin-top: 30px;
+        width: 188px;
+        height: 27px;
+        background: #ee398d;
+        border-radius: 50px;
+        font-size: 14px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: -webkit-gradient(linear,left top,right top,from(#41a9ee),to(#ee398d));
+    }
+    .data-price{
+        margin-top: 15px;
+        display: flex;
+        p{
+            width: 50px;
+            height: 17.6px;
+            background: #ee398d;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 12px;
+        }
+        h6{
+            // color: #ee398d;
+            font-size: 18px;
+            color: #dd3d95;
+            font-weight: 600;
+        }
+        h5{
+            font-size: 26px;
+            color: #dd3d95;
+        //    background: yellowgreen;
+           position: relative;
+           top: -5px;
+           left: 0;
+        }
+        .del{
+            margin:0 8px 0 15px ;
+            font-size: 14px;
+            color: #ababab;
+            position: relative;
+            top: 4px;
+            left: 0;
+            text-decoration: line-through;
+        }
+        .vip-price{
+            font-size: 14px;
+            color: #ababab;
+            position: relative;
+            top: 4px;
+            left: 0;
+        }
+    }
+
+}
